@@ -10,7 +10,10 @@ def append_booster_data(path: Path):
         data = pd.read_excel(_file, engine="xlrd")
 
         date = _file.stem.replace("all play ", "")
-        date = datetime.strptime(date, "%m-%d-%Y")
+        try:
+            date = datetime.strptime(date, "%m-%d-%Y")
+        except ValueError:
+            date = datetime.strptime(date, "%m-%d-%y")
         data["Play Date"] = date
         df = pd.concat([df, data])
     df = df.dropna(subset=["PlayerLevel"])
