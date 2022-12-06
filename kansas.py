@@ -20,4 +20,5 @@ def combine_all_files(dir: str):
 
 
 if __name__ == "__main__":
-    combine_all_files(".data/KU")
+    combine_all_files(".data/marapr21")
+
