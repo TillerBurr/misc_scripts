@@ -4,12 +4,15 @@ version = "0.1.0"
 description = ""
 authors = ["Tyler Baur <tbaur@teuteberg.com>"]
 readme = "README.md"
-packages = [{include = "misc_scripts"}]
+# packages = [{include = "misc_scripts"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.10, <3.12"
 pandas = "^1.4.2"
 PyPDF2 = "^1.28.2"
+openpyxl = "^3.0.10"
+rich = "^13.3.2"
+pyinstaller = "^5.9.0"
 
 
 [build-system]
